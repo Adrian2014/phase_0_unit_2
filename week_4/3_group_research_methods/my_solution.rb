@@ -33,19 +33,28 @@ end
 #
 
 
+
 # Person 3
 def my_array_sorting_method(source)
-  # Your code here!
+    source.sort_by{|x| x.to_s}
 end
 
+
+
+
 def my_hash_sorting_method(source)
-  # Your code here!
+  source.sort_by{|x,y| y}
 end
 
 # Identify and describe the ruby method you implemented. 
-# 
-#
-#
+# I used the .sort_by method.  I orignally wanted to learn and implement the partition method, but did not understand how to use it properly.
+# The .sort_by method works by going through the block and returning -1,0 or 1 for each value.
+# The sort algorithm will assume that this comparison function/block will meet the requirements for method <=>:
+# return -1 if x < y
+# return 0 if x = y
+# return 1 if x > y
+# Values are then listed by putting -1 to the left and 1 to the right.  
+# Making it easy to reverse lists by implementing y<=>x instead of default x<=>y
 
 
 # Person 4

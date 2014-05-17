@@ -14,6 +14,24 @@
 
 
 # 2. Initial Solution
+arrayOne=[1,2,2,3]
+arrayTwo=[1,2,3]
+arrayThree=["who", "what", "when", "where"]
+arrayFour=["who", "what", "who"]
+
+def mode(x)
+	frequencies=Hash.new(0)
+	 x.each {|value| value.to_sym}
+     x.each {|value| frequencies[value] += 1}
+
+     frequencies = frequencies.sort_by do |values, count|
+     count
+     end
+    frequencies.max { |a, b| a }
+end
+	
+
+
 
 
 
