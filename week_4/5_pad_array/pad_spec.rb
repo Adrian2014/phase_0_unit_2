@@ -1,4 +1,24 @@
 require_relative "my_solution"
+class Array 
+def pad(len, val=nil)
+  return dup if self.size >= len.abs
+  if len < 0
+    Array.new((len+size).abs,val) + self
+  else
+    self + Array.new(len-size,val)
+  end
+end
+         
+def pad!(len, val=nil)
+  return self if self.size >= len.abs
+  if len < 0
+    replace Array.new((len+size).abs,val) + self
+  else
+    concat Array.new(len-size,val)
+  end
+end
+end
+
 
 describe Array do
   let!(:empty_array)  { [] }

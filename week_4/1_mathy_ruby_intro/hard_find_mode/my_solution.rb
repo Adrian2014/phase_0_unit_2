@@ -19,21 +19,18 @@ arrayTwo=[1,2,3]
 arrayThree=["who", "what", "when", "where"]
 arrayFour=["who", "what", "who"]
 
-def mode(x)
-	frequencies=Hash.new(0)
-	 x.each {|value| value.to_sym}
-     x.each {|value| frequencies[value] += 1}
 
-     frequencies = frequencies.sort_by do |values, count|
-     count
-     end
-    frequencies.max { |a, b| a }
+def mode(array)
+  array.sort_by{|x| array.count(x)}.last
 end
 	
 
 
-
-
+def mode 
+  count = Hash.new(0)
+  each {|x| count[x] += 1 }
+  count.sort_by{|k,v| v}.last[0]
+  end
 
 
 # 3. Refactored Solution

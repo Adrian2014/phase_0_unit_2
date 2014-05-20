@@ -23,7 +23,7 @@
 
 
 def total(x)
-	x.inject(0) { |result, i| result + i }
+	x.inject(0) { |memo, i| memo + i }
 end
 
 def sentence_maker(x)
@@ -35,9 +35,9 @@ end
 
 # 3. Refactored Solution
 def total(x)
-	x.inject { |result, i| result + i }
+	x.inject { |memo, i| memo + i }
 end
-#does not need an initial value.  The result will stay the same, injecting (result + i) throughout the block.
+#does not need an initial value.  The result will stay the same, injecting (memo + i) throughout the block.
 def sentence_maker(x)
 	x.join(" ")
 end
@@ -49,6 +49,8 @@ end
 #	x.each {|i| i+=sum},
 # end
 #  ^ Above is my first method.
+# Once I figures out how to use .inject, this assigment become much easier!
+# I used the examples on stackflow to learn how to use .inject
 
 
 

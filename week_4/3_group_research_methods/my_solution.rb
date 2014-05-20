@@ -6,11 +6,15 @@ my_family_pets_ages = {"Evi" => 6, "Hoobie" => 3, "George" => 12, "Bogart" => 4,
 
 # Person 1's solution
 def my_array_finding_method(source, thing_to_find)
-  # Your code here!
+ 	source.select {|l| l.to_s.include?(thing_to_find)}
 end
 
+# My own driver code. Ignore.
+# test_case = ["brown", "blue", "black", "grey"]
+# puts my_array_finding_method(test_case, "b")
+
 def my_hash_finding_method(source, thing_to_find)
-  # Your code here!
+  source.select {|k, v| v == thing_to_find}.keys
 end
 
 # Identify and describe the ruby method you implemented. 
@@ -20,11 +24,24 @@ end
 
 # Person 2
 def my_array_modification_method(source, thing_to_modify)
-  # Your code here!
+	# #source[-1],source[2] = source[-1] + 1, source[2 ]+ 1 
+ #     source.collect! do |item|
+ #    #     # if item.is_a?(Integer)
+ #    #     #     item = item + thing_to_modify
+ #    #     # else 
+ #    #     # 	item = item
+ #    #     end
+     
+ #    item.is_a?(Integer) ? item = item + thing_to_modify : item = item
+ #    end
+ source.collect! { |item| item.is_a?(Integer) ? item += thing_to_modify : item = item } 
+    source
 end
 
+
 def my_hash_modification_method(source, thing_to_modify)
-  # Your code here!
+    source.each {|x,y| source [x] = y+thing_to_modify}
+    
 end
 
 # Identify and describe the ruby method you implemented. 
@@ -59,12 +76,13 @@ end
 
 # Person 4
 def my_array_deletion_method(source, thing_to_delete)
-  #Your code here!
+  source.delete_if { |word| word.to_s.include?(thing_to_delete) }
 end
 
 def my_hash_deletion_method(source, thing_to_delete)
-  #Your code here!
+  source.delete_if { |key| key.to_s.include?(thing_to_delete) }
 end
+
 
 # Identify and describe the ruby method you implemented. 
 # 

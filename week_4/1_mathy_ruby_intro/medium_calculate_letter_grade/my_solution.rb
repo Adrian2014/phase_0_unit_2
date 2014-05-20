@@ -14,9 +14,23 @@
 
 
 # 2. Initial Solution
+def get_grade(array)
+	averageGrade= array.inject{|memo, i| memo + i}/array.size;
+	if averageGrade >= 90
+		return "A"
+	elsif averageGrade >= 80
+		return "B"
+	elsif averageGrade >= 70
+		return "C"
+	elsif averageGrade >= 60
+		return "D"
+	else averageGrade < 60
+		return "F"
+end
 
-
-
+		
+		
+		
 
 # 3. Refactored Solution
 
