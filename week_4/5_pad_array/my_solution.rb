@@ -10,7 +10,7 @@
 
 # What is the input? Input is an array of values
 # What is the output? (i.e. What should the code return?)If the array's length is less than the minimum size, should return a new array padded with the pad value up to the minimum size.
-# What are the steps needed to solve the problem?
+# What are the steps needed to solve the problem? right a method that has .pad or .pad! itorate through and array
 
 
 # 2. Initial Solution
