@@ -60,19 +60,19 @@ class GuessingGame
   def guess(guess)
     @@guess="#{guess}".to_i
     if guess > @@answer
-      puts ":high"
+      ":high"
     elsif guess < @@answer
-      puts ":low"
+      ":low"
     else
-    puts ":correct"
+     ":correct"
     end
   end
 
   def solved?
     if  @@answer==@@guess
-      puts true
+       true
     else
-      puts false 
+      false 
     end
   end
 
@@ -103,6 +103,6 @@ p game.solved? == true
 # game = GuessingGame.new(0)
 # p game.solved?
 # it will return true without having guessed a number.  I am sure if I tinker with it I can change that.
-# I try to complete the solo challenges on my own.  But I did look up how to use the @@ property(not sure what to call it?)
+# I try to complete the solo challenges on my own.  But I did look up how to use the class variables (not sure what to call it?)
 # that is in Classes.  It helped a lot.  None of my driver code works.  I meant to go to a tutoring session about that, during week
 # 5, but I did not have the time.  I have a session during week 6 to find out why it is not working!

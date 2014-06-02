@@ -69,7 +69,10 @@ end
 
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
-
+def assert
+  raise "Assertion failed!" unless yield
+end
+assert {CreditCard.new(4408041234567892).check_card == false}
 
 card = CreditCard.new(4408041234567892)
       puts  card.check_card == false
